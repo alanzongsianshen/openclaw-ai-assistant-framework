@@ -218,5 +218,19 @@
       "preview": "content-design.md\n176.1k\n1\n2\n3\n4\nexport content-design\nfrom \"n8n-io/n8n\"\nProduct content designer fo"
     },
     "details": "// Product content designer for UI copy. Use when writing, reviewing, or auditing user-facing text: button labels, error messages, tooltips, empty states, modal copy, placeholder text, confirmation dialogs, onboarding flows, or i18n strings. Also use when the user says /copy, /content, or /ux-copy."
+  },
+  {
+    "timestamp": "2026-02-25T11:02:18.388Z",
+    "hour": 19,
+    "category": "✍️ 内容创作",
+    "searchQuery": "article",
+    "skillLearned": {
+      "name": "write-docs",
+      "stars": "45.3k",
+      "link": "https://skillsmp.com/skills/tldraw-tldraw-claude-skills-write-docs-skill-md",
+      "path": "tldraw-tldraw-claude-skills-write-docs-skill-md",
+      "preview": "write-docs.md\n45.3k\n1\n2\n3\n4\nexport write-docs\nfrom \"tldraw/tldraw\"\nWriting SDK documentation for tld"
+    },
+    "details": "This website uses a security service to protect against malicious bots. This page is displayed while the website verifies you are not a bot."
   }
 ]

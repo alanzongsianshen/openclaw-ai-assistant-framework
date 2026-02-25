@@ -180,6 +180,22 @@ def load_skills_learned():
         return f"*数据加载失败: {e}*"
     return "*今日暂无学习记录*"
 
+def send_to_telegram(report_file, summary_text):
+    """发送汇报到Telegram"""
+    try:
+        import subprocess
+        result = subprocess.run(
+            ['python3', 'scripts/telegram_sender.py', report_file],
+            capture_output=True,
+            text=True,
+            cwd='/home/zzyuzhangxing/.openclaw/workspace'
+        )
+        print("✅ Telegram发送完成")
+        return True
+    except Exception as e:
+        print(f"⚠️ Telegram发送失败: {e}")
+        return False
+
 def sync_to_feishu(content, title):
     """同步到飞书Wiki"""
     try:
@@ -240,6 +256,10 @@ def main():
     # 同步到飞书
     print("\n🔄 正在同步到飞书...")
     sync_to_feishu(report, f"每日汇报 - {today}")
+    
+    # 发送到Telegram
+    print("\n📱 正在发送到Telegram...")
+    send_to_telegram(report_file, summary)
     
     # 输出摘要
     print("\n" + "=" * 60)
