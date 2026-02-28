@@ -72,6 +72,18 @@
     "instagram-photo-find": {
       "version": "1.0.0",
       "installedAt": 1772244155955
+    },
+    "seo-content-writer": {
+      "version": "2.0.0",
+      "installedAt": 1772251291170
+    },
+    "content-id-guide": {
+      "version": "1.0.0",
+      "installedAt": 1772251298528
+    },
+    "agent-content-pipeline": {
+      "version": "0.2.3",
+      "installedAt": 1772251305850
     }
   }
 }

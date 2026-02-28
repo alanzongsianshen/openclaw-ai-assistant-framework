@@ -113,6 +113,19 @@ function installSkill(skillName) {
     });
 
     log(`✅ 安装成功: ${skillName}`);
+
+    // 提取知识点
+    try {
+      execSync(`python3 ${WORKSPACE}/scripts/extract-skill-knowledge.py ${skillName}`, {
+        cwd: WORKSPACE,
+        encoding: 'utf8',
+        timeout: 30000
+      });
+      log(`📚 已提取知识点: ${skillName}`);
+    } catch (e) {
+      log(`⚠️ 提取知识点失败: ${skillName}`);
+    }
+
     return { success: true };
   } catch (e) {
     const errorMsg = e.message || '';
